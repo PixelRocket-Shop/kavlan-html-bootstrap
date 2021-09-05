@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs page="Tooltips"}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Tooltips</h2>
+            <p class=" mb-4">Documentation and examples for adding custom Bootstrap tooltips with CSS and
+                JavaScript using CSS3 for animations and data-bs-attributes for local title storage.</p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+
+                    <!-- Example-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="card-title">Default example</h6>
+                        </div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success mb-2" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Tooltip on top">
+                                Tooltip on top
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-toggle="tooltip"
+                                data-bs-placement="right" title="Tooltip on right">
+                                Tooltip on right
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Tooltip on bottom">
+                                Tooltip on bottom
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-toggle="tooltip"
+                                data-bs-placement="left" title="Tooltip on left">
+                                Tooltip on left
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /Example-->
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

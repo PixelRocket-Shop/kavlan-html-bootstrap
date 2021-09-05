@@ -1,0 +1,22 @@
+.chart {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+
+    canvas {
+        width: 100% !important;
+    }
+}
+
+.chart-sm {
+    height: 3rem;
+}
+
+.chart-md {
+    height: 10rem;
+}
+
+.chart-lg {
+    height: 20rem;
+}

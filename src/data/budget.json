@@ -1,0 +1,54 @@
+{
+   "current": [{
+         "title": "Marketing",
+         "css-class": "danger",
+         "value": "80"
+      },
+      {
+         "title": "Sales",
+         "css-class": "success",
+         "value": "20"
+      },
+      {
+         "title": "Development",
+         "css-class": "info",
+         "value": "60"
+      },
+      {
+         "title": "SEO",
+         "css-class": "danger",
+         "value": "90"
+      },
+      {
+         "title": "Design",
+         "css-class": "warning",
+         "value": "75"
+      }
+   ],
+   "previous": [{
+         "title": "Marketing",
+         "css-class": "info",
+         "value": "60"
+      },
+      {
+         "title": "Sales",
+         "css-class": "warning",
+         "value": "70"
+      },
+      {
+         "title": "Development",
+         "css-class": "success",
+         "value": "50"
+      },
+      {
+         "title": "SEO",
+         "css-class": "danger",
+         "value": "80"
+      },
+      {
+         "title": "Design",
+         "css-class": "warning",
+         "value": "65"
+      }
+   ]
+}

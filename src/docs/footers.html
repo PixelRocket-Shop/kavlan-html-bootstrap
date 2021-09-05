@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Footer</h3>
+                    <p>To see the available footers, please view our template demo: <a href="{{ config.demoURL }}">Demo Site</a> and hover over the "UI Components" menu option. There you will find a link to all available footers for the template.</p> 
+                    <p>Partial location: <code class="language-markup">src/partials/footers</code></p>                  
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

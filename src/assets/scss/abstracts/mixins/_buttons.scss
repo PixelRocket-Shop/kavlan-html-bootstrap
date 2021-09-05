@@ -1,0 +1,16 @@
+/* Mixin button faded */
+@mixin btn-variant-faded($bg, $color) {
+    background-color: $bg;
+    color: $color;
+  
+    &:hover, &:focus {
+      background-color: fade-in($bg, .05);
+      color: $color;
+    }
+  
+    &.active {
+      background-color: fade-in($bg, .05);
+      color: $color;
+    }
+}
+

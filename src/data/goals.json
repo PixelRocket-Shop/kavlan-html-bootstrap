@@ -1,0 +1,31 @@
+{
+   "entries": [{
+      "goal": "Submit yearly sales report for group review",
+      "checked": true
+   },
+   {
+      "goal": "Do API V2 review with dev team",
+      "checked": false
+   },
+   {
+      "goal": "Review dashboard redesign with Sarah",
+      "checked": false
+   },
+   {
+      "goal": "Generate 10% more sales leads through social media",
+      "checked": false
+   },
+   {
+      "goal": "Increase main site pageviews by 25%",
+      "checked": true
+   },
+   {
+      "goal": "Weekly code review with dev team",
+      "checked": false
+   },
+   {
+      "goal": "Finish specification for subscription module",
+      "checked": false
+   }
+]
+}

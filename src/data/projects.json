@@ -1,0 +1,82 @@
+{
+   "entries": [{
+      "project": "Move headquarters to London",
+      "status": "In progress",
+      "status-class": "warning",
+      "date": "24th June, 2021",
+      "team": [{
+            "img": "{{webRoot}}/assets/images/profile-small.jpeg",
+            "name": "John Doe"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+            "name": "Sally Field"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-3.jpeg",
+            "name": "Patrick Johnson"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-4.jpeg",
+            "name": "Rob Waite"
+         }
+      ]
+   },
+   {
+      "project": "Update API to V2",
+      "status": "Completed",
+      "status-class": "success",
+      "date": "18th June, 2021",
+      "team": [{
+            "img": "{{webRoot}}/assets/images/profile-small-7.jpeg",
+            "name": "Brian Johnson"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-6.jpeg",
+            "name": "Patty Smith"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-5.jpeg",
+            "name": "Andrew Sully"
+         }
+      ]
+   },
+   {
+      "project": "Europe marketing report",
+      "status": "Overdue",
+      "status-class": "danger",
+      "date": "12th June, 2021",
+      "team": [{
+         "img": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+         "name": "Sally Field"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-7.jpeg",
+            "name": "Jacky Nellon"
+         }
+      ]
+   },
+   {
+      "project": "Year end profit loss report",
+      "status": "In progress",
+      "status-class": "warning",
+      "date": "12th August, 2021",
+      "team": [{
+            "img": "{{webRoot}}/assets/images/profile-small-5.jpeg",
+            "name": "Brian Gouldon"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+            "name": "Sally Field"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small.jpeg",
+            "name": "John Doe"
+         },
+         {
+            "img": "{{webRoot}}/assets/images/profile-small-4.jpeg",
+            "name": "Rob Waite"
+         }
+      ]
+   }]
+}

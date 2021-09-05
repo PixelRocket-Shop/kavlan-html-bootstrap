@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>MediumZoom</h3>
+                    <p>Plugin homepage: <a href="https://github.com/francoischalifour/medium-zoom">https://github.com/francoischalifour/medium-zoom</a></p>
+                    <p>A JavaScript library for zooming images like Medium</p>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <picture>
+                            <img title="" class="img-fluid mb-2 w-100 img-two"
+                                src="{{webRoot}}/assets/images/products/premium/product-page-6.jpg"
+                                alt="{{config.defaultImgAlt}}" data-zoomable>
+                        </picture>
+                    </div>
+
+                    <h4>Basic setup</h4>
+                    <p>Add "data-zoomable" to the IMG tag you want to make zoomable.</p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <picture>
+                            <img title="" class="img-fluid mb-2 w-100 img-two"
+                                src="{{webRoot}}/assets/images/products/premium/product-page-6.jpg"
+                                alt="{{config.defaultImgAlt}}" data-zoomable>
+                        </picture>        
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/image-zoom</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

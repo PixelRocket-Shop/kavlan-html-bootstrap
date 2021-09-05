@@ -1,0 +1,20 @@
+.transition-color {
+    transition: color ease-in .2s;
+}
+
+.dot {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.dot-sm {
+    width: .75rem;
+    height: .75rem;
+}
+
+.dot-xs {
+    width: .475rem;
+    height: .475rem;
+}

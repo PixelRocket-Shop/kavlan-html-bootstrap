@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs page="Offcanvas"}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Offcanvas</h2>
+            <p class=" mb-4">Build hidden sidebars into your project for navigation, shopping carts, and more.
+            </p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+
+                    <!-- Example-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="card-title">Default example</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-primary mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                                aria-controls="offcanvasExample">
+                                Link with href
+                            </a>
+                            <button class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                Button with data-bs-target
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /Example-->
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

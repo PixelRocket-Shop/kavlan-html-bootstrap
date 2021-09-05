@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Simplebar</h3>
+                    <p>Plugin homepage: <a href="https://github.com/Grsmto/simplebar">https://github.com/Grsmto/simplebar</a></p>
+                    <p>SimpleBar does only one thing: replace the browser's default scrollbar with a custom CSS-styled one without losing performances.</p>
+
+                    {{#if (config filters-one.brands) }}
+                    <!-- Brands Filter -->
+                    <div class="py-4 widget-filter border-top">
+                        <a class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+                            data-bs-toggle="collapse" href="#filter-brands" role="button" aria-expanded="true"
+                            aria-controls="filter-brands">
+                            Brands
+                        </a>
+                        <div id="filter-brands" class="collapse show">
+                            <div class="input-group my-3 py-1">
+                                <input type="text" class="form-control py-2 filter-search rounded" placeholder="Search" aria-label="Search">
+                                <span class="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20"><i class="ri-search-2-line text-muted"></i></span>
+                            </div>
+                            <div class="simplebar-wrapper">
+                                <div class="filter-options" data-pixr-simplebar>
+                                    {{#each filters-one.brands }}
+                                        {{> filters/filter-checkbox this type="brand" }}
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Brands Filter -->
+                {{/if}}                     
+
+                    <h4>Basic setup</h4>
+                    <p>Add "data-pixr-simplebar" to the element you want to output the simplebar on. You will also need to set a fixed height on a parent element. We have created the CSS class "simplebar-wrapper" with a fixed height for this but any CSS elem with a fixed height will do.</p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <div class="simplebar-wrapper">
+                            <div class="filter-options" data-pixr-simplebar>
+                                HERE GOES CONTENT
+                            </div>
+                        </div>       
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/simplebar</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

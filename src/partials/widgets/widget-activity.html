@@ -1,0 +1,36 @@
+{{# if (config activity)}}
+<div class="card h-100">
+    <div class="card-header justify-content-between align-items-center d-flex border-0 pb-0">
+        <h6 class="card-title m-0">Recent activity</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownActivity" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownActivity">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+
+            {{#each activity.entries }}
+            <li class="list-group-item list-group-activity py-3 d-flex align-items-start">
+                <picture class="mt-1 avatar avatar-xs me-4">
+                    <img src="{{ img }}" alt="{{ config.defaultImgAlt }}">
+                </picture>
+                <div>
+                    <p class="text-white mb-1">{{ name }}</p>
+                    <span class="small d-block">{{ activity }}</span>
+                    <span class="small d-block">{{ time }}</span>
+                </div>
+            </li>
+            {{/each}}
+
+        </ul>
+    </div>
+</div>
+{{/if}}

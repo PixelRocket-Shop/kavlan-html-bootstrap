@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Spacing</h3>
+                    <p>We've extended the default spacing options of Bootstrap so that instead of only having padding or margin options available from 1 - 5, with our template you have 1 - 10.</p>     
+                    <div class="d-flex flex-wrap my-5">
+                        <div class="p-6 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-6</div>
+                        <div class="p-8 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-8</div>
+                        <div class="p-10 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-10</div>
+                    </div> 
+                    <script type="text/plain" class="language-markup">
+                        <div class="d-flex flex-wrap my-5">
+
+                            <div class="p-6 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-6</div>
+
+                            <div class="p-8 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-8</div>
+
+                            <div class="p-10 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">p-10</div>
+                            
+                        </div>                   
+                    </script>               
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

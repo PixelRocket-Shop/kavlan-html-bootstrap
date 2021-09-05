@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Category card</h3>
+                    <p>Custom card components to display products inside category listing elements.</p>
+
+                    <div class="alert alert-danger-faded">Please note that we are outputting the examples below by linking to existing partials meant for the template demo. That means any HREF links will not point to the correct page from this helpdoc page. In short: if you click on any links here, you will get a page not found.</div>
+
+                    <h4>Category Listing Card One</h4>
+                    <p>Partial location: <code class="language-markup">src/partials/category/listing-cards/listing-card-one.html</code></p> 
+                    <!-- Listing Card One -->
+                    <div class="row g-4 mb-10">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{> listing-cards/listing-card-one category-one.entries.[0] }}
+                        </div>                   
+                    </div>                                  
+                    <!-- / Listing Card One -->
+                    <script type="text/plain" class="language-markup">
+                        {{> listing-cards/listing-card-one category-one.entries.[0] }}
+                    </script>   
+        
+                    <h4>Category Listing Card Two</h4>
+                    <p>Partial location: <code class="language-markup">src/partials/category/listing-cards/listing-card-two.html</code></p> 
+                    <!-- Listing Card Two -->
+                    <div class="row g-4 mb-10">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{> listing-cards/listing-card-two category-one.entries.[3] }}
+                        </div>  
+                    </div>            
+                    <!-- / Listing Card Two -->
+                    <script type="text/plain" class="language-markup">
+                        {{> listing-cards/listing-card-two category-one.entries.[3] }}
+                    </script>   
+                    
+                    <h4>Category Listing Card Three</h4>
+                    <p>Partial location: <code class="language-markup">src/partials/category/listing-cards/listing-card-three.html</code></p> 
+                    <!-- Listing Card Three -->
+                    <div class="row g-4 mb-10">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{> listing-cards/listing-card-three category-two.entries.[0] }}
+                        </div>  
+                    </div>                                  
+                    <!-- / Listing Card Three -->     
+                    <script type="text/plain" class="language-markup">
+                        {{> listing-cards/listing-card-three category-two.entries.[0] }}
+                    </script>                        
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

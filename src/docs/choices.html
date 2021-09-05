@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Choices</h3>
+                    <p>Plugin homepage: <a href="https://github.com/jshjohnson/Choices">https://github.com/jshjohnson/Choices</a></p>
+                    <p>A vanilla, lightweight (~19kb gzipped 🎉), configurable select box/text input plugin. Similar to Select2 and Selectize but without the jQuery dependency.</p>
+                    <h4>Basic setup</h4>
+                    <p>Add "data-choices" to the select element.</p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <select name="selectSize" class="form-control" data-choices>
+                                <option value="">Please Select Size</option>
+                                <option value="Extra Small">XS</option>
+                                <option value="Medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="Extra Large">XL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <select name="selectSize" class="form-control" data-choices>
+                            <option value="">Please Select Size</option>
+                            <option value="Extra Small">XS</option>
+                            <option value="Medium">M</option>
+                            <option value="Large">L</option>
+                            <option value="Extra Large">XL</option>
+                        </select>        
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/choices</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

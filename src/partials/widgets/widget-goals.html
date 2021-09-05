@@ -1,0 +1,55 @@
+{{#if (config goals)}}
+<div class="card h-100">
+    <div class="card-header justify-content-between align-items-center d-flex border-0 pb-0">
+        <h6 class="card-title m-0">Goals</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownGoals" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownGoals">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <div class="mt-3">
+            {{#each goals.entries}}
+            <div class="form-check goal d-flex align-items-start mb-3 ps-0">
+                <input id="goal-{{ @index }}"
+                    class="form-check-input m-0 d-flex align-self-start me-3 mt-1 cursor-pointer" type="checkbox"
+                    {{#if checked}} checked{{/if}}>
+                <label class="m-0 d-flex cursor-pointer align-self-start form-check-label"
+                    for="goal-{{ @index }}">{{ goal }}</label>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+    <!--  Card Footer -->
+    <div class="card-footer">
+
+        <div class="row align-items-center">
+
+            <!-- New Goal Input -->
+            <div class="col">
+                <textarea class="form-control" rows="1" placeholder="Add new goal"></textarea>
+            </div>
+            <!-- /New Goal Input -->
+
+            <div class="col-auto">
+                <button class="btn btn-sm btn-primary">
+                    Create
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- / Card Footer-->
+
+</div>
+{{/if}}

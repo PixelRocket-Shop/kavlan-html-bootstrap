@@ -1,0 +1,33 @@
+{
+   "entries": [{
+         "title": "Annual sales report due",
+         "date": "21st Aug, 2021",
+         "css-class": "danger",
+         "icon": "ri-alert-line"
+      },
+      {
+         "title": "Quarterly staff reviews",
+         "date": "24th Aug, 2021",
+         "css-class": "warning",
+         "icon": "ri-user-line"
+      },
+      {
+         "title": "Jenny Smith holiday",
+         "date": "27th Aug, 2021",
+         "css-class": "info",
+         "icon": "ri-user-line"
+      },
+      {
+         "title": "Marketing budget review",
+         "date": "2nd Sep, 2021",
+         "css-class": "secondary",
+         "icon": "ri-computer-line"
+      },
+      {
+         "title": "Developer contract renewal",
+         "date": "10th Sep, 2021",
+         "css-class": "secondary",
+         "icon": "ri-computer-line"
+      }
+   ]
+}

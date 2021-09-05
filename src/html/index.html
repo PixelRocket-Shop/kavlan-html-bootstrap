@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Top Row Widgets-->
+            <div class="row g-4 mb-4">
+
+                <!-- Schedule Widget-->
+                <div class="col-12 col-lg-6">
+                    {{> widgets/widget-schedule }}
+                </div>
+                <!-- / Schedule Widget-->
+
+                <!-- Budget Summary-->
+                <div class="col-12 col-lg-6">
+                    {{> widgets/widget-budget }}
+                </div>
+                <!-- / Budget Summary-->
+
+            </div>
+            <!-- Top Row Widgets-->
+
+            <!-- Middle Row Widgets-->
+            <div class="row g-4 mb-4">
+
+                <!-- Activity Widget-->
+                <div class="col-12 col-lg-4">
+                    {{> widgets/widget-activity }}
+                </div>
+                <!-- / Activity Widget-->
+
+                <!-- Goals Widget-->
+                <div class="col-12 col-lg-4">
+                    {{> widgets/widget-goals }}
+                </div>
+                <!-- / Goals Widget-->
+
+                <!-- Reminders Widget-->
+                <div class="col-12 col-lg-4">
+                    {{> widgets/widget-reminders }}
+                </div>
+                <!-- / Reminders Widget-->
+
+                <!-- Sales By Region Widget-->
+                <div class="col-12 col-lg-4">
+                    {{> widgets/widget-sales-region }}
+                </div>
+                <!--/ Sales By Region Widget-->
+
+                <!-- Sales Conversions Widget-->
+                <div class="col-12 col-lg-8">
+                    {{> widgets/widget-sales-conversions }}
+                </div>
+                <!-- Sales Conversions Widget-->
+
+            </div>
+            <!-- Middle Row Widgets-->
+
+            <!-- Bottom Row Widgets-->
+            <div class="row g-4 mb-4">
+
+                <!-- Projects Widget-->
+                <div class="col-12">
+                    {{> widgets/widget-projects }}
+                </div>
+                <!-- / Projects Widget-->
+
+            </div>
+            <!-- Bottom Row Widgets-->
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

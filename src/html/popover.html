@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs page="Popovers"}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Popovers</h2>
+            <p class=" mb-4">Documentation and examples for adding Bootstrap popovers, like those found in
+                iOS, to any element on your site..</p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+
+                    <!-- Example-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="card-title">Default examples</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success mb-2" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                                Popover on top
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+                                Popover on right
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                                Popover on bottom
+                            </button>
+                            <button type="button" class="btn btn-success mb-2" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+                                Popover on left
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /Example-->
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

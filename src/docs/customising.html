@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Customising template</h3>
+                    <p>Let's go through the various ways in which you may want to customise the template:</p>
+                    <ul>
+                        <li>Customise CSS/SASS</li>
+                        <li>Customise Favicon Image</li>
+                        <li>Customise Font</li>
+                        <li>Customise Images/Video</li>
+                        <li>Edit/Create HTML Pages</li>
+                    </ul>
+                    <h4>Customise CSS/SASS</h4>
+                    <p>All of the template's source CSS/SASS files are kept inside the template's assets folder. Navigate to <code class="language-markup">src/assets/scss</code>. Open up <code class="language-markup">theme.scss</code> with your editor.</p>
+                    <p>This is the main entry point for all other SASS/CSS files.</p>
+                    <div class="alert alert-danger-faded">We suggest that you do not write custom code directly into theme.scss. Instead, import your SASS/CSS file into this file. That way you keep your CSS tidy and well-organised.</div>
+                    <p>If you want to customise Bootstrap's variables, please open up: <code class="language-markup">src/assets/scss/abstracts/_sass-variables.scss</code></p>
+                    <p>You can read more about customising Bootstrap's default SASS here: <a href="https://getbootstrap.com/docs/5.0/customize/sass/">https://getbootstrap.com/docs/5.0/customize/sass/</a></p>
+                    <p>If you only want to write custom CSS, then we have setup a file for you. Open <code class="language-markup">src/assets/scss/custom.scss</code>. Add your code, save file.</p>
+
+                    <h4>Customise Favicon Image</h4>
+                    <p>Create your new favicon and name it "favicon.ico". Navigate to <code class="language-markup">src/assets/favicon</code>. Replace the current favicon file with your new favicon. You may have to clear your browser's cache to see the updated favicon. If you want to use a different name or extension for your favicon, place the favicon in the same directory, then open up the following file: <code class="language-markup">src/partials/header/head/head.html</code> and update this code accordingly: </p>
+
+                    <script type="text/plain" class="language-markup markup-block">
+                        <!-- Favicon -->
+                        <link rel="shortcut icon" href="{{webRoot}}/assets/favicon/favicon.ico" type="image/x-icon" />            
+                    </script>
+
+                    <h4>Customise Font</h4>
+                    <p>There are different ways to add a custom font to a website. For the purpose of this helpdoc article, let's assume you have generated a @font-face kit. Navigate to <code class="language-markup">src/assets/fonts</code> and delete the existing fonts. Place your custom font files into this folder. Then in your code editor, open up file: <code class="language-markup">src/assets/scss/base/_base.scss</code> and update the code accordingly. Not sure about this step? Read more about what webfont are here: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts</a></p>
+                    <p>For the final step, in your code editor, open up the file: <code class="language-markup">src/assets/scss/abstract/_css-vars.scss</code> and update the value for "--bs-font-..." and "--theme-font-headings". The "-bs-font-" value will either end "sans-serif" or "serif", depending on what font type we used for your template. In most cases our templates only use a single font for both headings and body text, but there may be different fonts per element, or you may want different fonts for these elements. In that case, only change the relevant CSS property instead of updating both.</p>
+
+                    <h4>Customise Images/Video</h4>
+                    <p>To update images, navigate to <code class="language-markup">src/assets/images</code>. Place your custom images here.</p>
+                    <p>To update videos, navigate to <code class="language-markup">src/assets/videos</code>. Place your custom videos here.</p>
+
+                    <h4>Edit/Create HTML Pages</h4>
+                    <p>To create a new page, navigate in your code editor to: <code class="language-markup">src/html</code>. To make it easier to get the correct HTML in place, clone an existing page (we have created a "blank.html" for this purpose, but you can use any existing page). Rename the newly-created file to whatever URL you require. And that's it. You are now free to open the new page with your code editor, make your changes, and then save the file.</p>
+                    <div class="alert alert-danger-faded">You will likely have to restart Webpack when you create a new file.</div>
+                    <p>To edit an existing HTML file, navigate to the same folder, open the file you wish to edit, make your changes, and save the file. Webpack will automatically refresh your browser with the updated code.</p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

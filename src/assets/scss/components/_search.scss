@@ -1,0 +1,18 @@
+.navbar-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $gray-900;
+    border-bottom: 1px solid $border-color;
+    z-index: 500;
+    transition: opacity ease-in .2s, transform ease-in-out .2s;
+    transform: translateY(-100%);
+}
+
+.search-active {
+    .navbar-search {
+        transform: translateY(0);
+    }
+}

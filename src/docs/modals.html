@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Modals</h3> 
+            
+                    <div class="d-flex justify-content-start align-items-center mb-5">
+                        <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#sizeModal">
+                            Size Guide Modal
+                        </button>
+                        <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#waitingListModal">
+                            Waiting List Modal
+                        </button>
+                        <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#saleModal">
+                            Sale Code Modal
+                        </button>
+                    </div>  
+                    
+                    <p>Size Guide Modal Partial location: <code class="language-markup">src/partials/modals/modal-sizeguide.html</code></p> 
+                    <p>Waiting List Modal Partial location: <code class="language-markup">src/partials/modals/modal-waitinglist.html</code></p> 
+                    <p>Sale Code Modal Partial location: <code class="language-markup">src/partials/modals/modal-sale.html</code></p> 
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

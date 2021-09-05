@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+  <!-- Main Section-->
+  <section class="d-flex justify-content-center align-items-start vh-100 py-5 px-3 px-md-0">
+
+    <!-- Login Form-->
+    <div class="d-flex flex-column w-100 align-items-center">
+
+      <!-- Logo-->
+      <a href="{{webRoot}}/index.html" class="d-table mt-5 mb-4 mx-auto">
+        {{> navbar/logo }}
+      </a>
+      <!-- Logo-->
+
+      <div class="shadow-lg rounded p-4 p-sm-5 bg-white form mb-4">
+        <h5 class="fw-bold mb-3 text-muted">Register</h5>
+        <a href="#" class="btn btn-facebook d-block mb-2"><i class="ri-facebook-circle-fill align-bottom"></i> Login
+          with Facebook</a>
+        <a href="#" class="btn btn-twitter d-block mb-2"><i class="ri-twitter-fill align-bottom"></i> Login with
+          Twitter</a>
+        <span class="text-muted text-center d-block fw-bolder my-4">OR</span>
+
+        <!-- Register Form-->
+        <form class="mt-4">
+          <div class="form-group">
+            <label class="form-label form-label-light" for="register-fname">First name</label>
+            <input type="text" class="form-control form-control-light" id="register-fname" placeholder="Enter your first name">
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label-light" for="register-lname">Last name</label>
+            <input type="text" class="form-control form-control-light" id="register-lname" placeholder="Enter your last name">
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label-light" for="register-email">Email address</label>
+            <input type="email" class="form-control form-control-light" id="register-email" placeholder="name@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label-light" for="register-password">Password</label>
+            <input type="password" class="form-control form-control-light" id="register-password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary d-block w-100 my-4">Sign Up</button>
+        </form>
+        <!-- / Register Form-->
+
+        <p class="d-block text-center text-muted small">Already registered? <a
+            class="text-muted text-decoration-underline" href="{{webRoot}}/login.html">Login here.</a></p>
+      </div>
+    </div>
+    <!-- / Login Form-->
+
+  </section>
+  <!-- / Main Section-->
+
+  <!-- Theme JS -->
+  {{> footer/scripts }}
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Installation</h3>
+                    <p>You only need to do the following steps if you intend to run Webpack and recompile the template. Please also ensure that you have Node.js installed (unsure? read the "Requirements" section in the "Getting Started" section of these helpdocs).</p>
+                    <p><b>Step One:</b> open up the template folder in your command line. Ensure you are inside the root of the template.</p>   
+                    <p><b>Step Two: </b> in your command line, run <code class="language-markup">npm install</code>. This will install all the dependancies listed in your package.json file.</p>
+                    <p><b>Step Three: </b> in your command line, run <code class="language-markup">npm start</code>. That's it. Your browser will now open and the "dev" version of the site will be loaded.</p>
+                    <div class="alert alert-danger-faded">Please note that when you run <code class="language-markup">npm start</code>, Webpack devserver is started. This means any changes you make will not visible in the template's <code class="language-markup">dist</code> folder until you compile it. Webpack devserver holds the files in memory. So make all the changes to the files inside the <code class="language-markup">src</code> folder, view them in your browser, and then when and if you require access to the compiled code, follow the steps below to compile your template.</div>
+                    <h4>Build template</h4>
+                    <p>As mentioned above, when you run Webpack devserver, the files are kept in memory. You might at some stage want to get access to the compiled version of your updated code. To do that, follow these steps:</p>
+                    <p><b>Step One: </b> if you currently have the site running through Webpack devserver, kill that process by pressing the CTRL + C buttons (make sure you are in your command line).</p>
+                    <p><b>Step Two: </b> in your command line, type <code class="language-markup">npm run build</code>.</p>
+                    <p>And that's it. The existing <code class="language-markup">dist</code> folder will now be deleted by Webpack, and the updated code will be compiled and output to a new <code class="language-markup">dist</code> folder.</p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

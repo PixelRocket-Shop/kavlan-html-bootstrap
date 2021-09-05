@@ -1,0 +1,20 @@
+// faded background
+@each $color, $value in $theme-colors {
+    .bg-#{$color}-faded {
+      @include bg-variant-faded(rgba($value, $btn-faded-bg-opacity));
+    }
+}
+
+/* custom bg colours */
+.bg-dark-700 {
+  background: $gray-700
+}
+.bg-dark-800 {
+  background: $gray-800
+}
+.bg-dark-900 {
+  background: $gray-900
+}
+.bg-dark-opacity {
+  background: var(--theme-bg-dark-opacity);
+}

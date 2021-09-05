@@ -1,0 +1,22 @@
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: $border-color;
+}
+
+.table {
+    th {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    td:active {
+        background-color: transparent;
+    }
+
+    &.table-striped {
+        tr:nth-child(#{$table-striped-order}) {
+            td:active {
+                background: $table-striped-bg !important;
+            }
+        }
+    }
+}

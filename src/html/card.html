@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs page="Card"}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Card</h2>
+            <p class="mb-4">Bootstrap’s cards provide a flexible and extensible content container with
+                multiple variants and options.</p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+
+                    <!-- Example-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="card-title">Default example</h6>
+                            <p class="m-0 small">Cards are built with as little markup and styles
+                                as possible, but still manage to deliver a ton of control.</p>
+                        </div>
+                        <div class="card-body">
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                        </div>
+                    </div>
+                    <!-- /Example-->
+
+                    <!-- Image Example-->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1533630217389-3a5e4dff5683?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&h=500&q=80"
+                            class="card-img-top" alt="{{ config.defaultImgAlt }}">
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <!-- / Image Example-->
+
+                </div>
+
+                <div class="col-12 col-md-6">
+
+                    <!--  Example-->
+                    <div class="card mb-4">
+                        <div class="card-header justify-content-between align-items-center d-flex">
+                            <h6 class="card-title m-0">Dropdown menu example</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="ri-more-2-line"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Click on the ellipse icon in the top right corner of this card to see a dropdown example
+                                integrated with the card header title.</p>
+                        </div>
+                    </div>
+                    <!-- / Example-->
+
+                    <!-- Collapse Example-->
+                    <div class="card">
+                        <a class="card-header text-decoration-none text-body" data-bs-toggle="collapse"
+                            href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <h6 class="card-title m-0">Dropdown card example</h6>
+                        </a>
+                        <div class="collapse show" id="collapseExample">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Collapse Example-->
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

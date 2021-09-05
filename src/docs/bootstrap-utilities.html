@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Bootstrap default utilities</h3>
+                    <p>Bootstrap already has a comprehensive section in their helpdocs detailing all available utilities. Our helpdocs do not repeat their information. Instead, we focus on the custom utilities our template provides. Please start by reading through Bootstrap's Utility section of their helpdocs: <a href="https://getbootstrap.com/docs/5.0/utilities/api/">https://getbootstrap.com/docs/5.0/utilities/api/</a></p>  
+                    <p>All core Bootstrap utilities are available in our template.</p>
+                    <h4>Bootstrap Utility API</h4>
+                    <p>We have setup a SCSS file to override and extend Bootstrap's utility classes through their API. You can find it here: <code class="language-markup">src/assets/scss/utilities/_bootstrap-api-utilities.scss</code>. Please refer to the Bootstrap documentation for a detailed overview of how to extend their utility classes using their API: <a href="https://getbootstrap.com/docs/5.0/utilities/api/">https://getbootstrap.com/docs/5.0/utilities/api/</a></p>                 
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

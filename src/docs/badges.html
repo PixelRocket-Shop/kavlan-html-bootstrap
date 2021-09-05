@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Badges</h3>
+                    <p>Default and custom faded badges available. All theme colours available.</p>
+
+                    <h4>Default badges</h4>
+                    <p>Example heading <span class="badge bg-success">sale</span></p>
+                    <p>Example heading <span class="badge bg-danger">sale</span></p>
+                    <p>Example heading <span class="badge bg-primary">sale</span></p>
+
+
+                    <script type="text/plain" class="language-markup">   
+                        <p>Example heading <span class="badge bg-success">sale</span></p>
+
+                        <p>Example heading <span class="badge bg-danger">sale</span></p>
+
+                        <p>Example heading <span class="badge bg-primary">sale</span></p>               
+                    </script>   
+                    
+                    <h4>Faded badges</h4>
+                    <p>Use "bg-${color}-faded" for faded buttons.</p>
+
+                    <p>Example heading <span class="badge bg-success-faded text-success">sale</span></p>
+                    <p>Example heading <span class="badge bg-danger-faded text-danger">sale</span></p>
+                    <p>Example heading <span class="badge bg-primary-faded text-primary">sale</span></p>
+
+
+                    <script type="text/plain" class="language-markup">   
+                        <p>Example heading <span class="badge bg-success-faded text-success">sale</span></p>
+
+                        <p>Example heading <span class="badge bg-danger-faded text-danger">sale</span></p>
+                        
+                        <p>Example heading <span class="badge bg-primary-faded text-primary">sale</span></p>              
+                    </script>                       
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

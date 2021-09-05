@@ -1,0 +1,73 @@
+{{#if (config schedule)}}
+    <div class="card h-100">
+        <div class="card-header justify-content-between align-items-center d-flex border-0 pb-0">
+            <h6 class="card-title">Schedule</h6>
+
+            <!-- Nav Pills-->
+            <ul class="nav nav-pills justify-content-end m-0" id="scheduleTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="today-tab" data-bs-toggle="tab" data-bs-target="#today" type="button" role="tab" aria-controls="today" aria-selected="true">Today</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tomorrow-tab" data-bs-toggle="tab" data-bs-target="#tomorrow" type="button" role="tab" aria-controls="tomorrow" aria-selected="false">Tomorrow</button>
+                </li>
+            </ul>
+            <!-- / Nav Pills-->
+
+        </div>
+        <div class="card-body">
+
+            <!-- Tab Content-->
+            <div class="tab-content" id="scheduleTabContent">
+
+                <!-- Tab Today Content-->
+                <div class="tab-pane fade show active" id="today" role="tabpanel" aria-labelledby="today-tab">
+                    <ul class="list-group list-group-flush">
+
+                        {{#each schedule.today}}
+                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bolder mb-2 text-white">{{ title }}</p>
+                                    <span class="small d-flex align-items-center"><i class="ri-time-line me-2"></i> {{ time }} <i class="ri-map-pin-line ms-6 me-2"></i> {{ location }}</span>
+                                </div>
+
+                                <div class="dropdown ms-5">
+                                    <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0"
+                                        type="button" id="dropDownSchedule-{{ @index }}" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="ri-more-2-line"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown dropdown-menu-end" aria-labelledby="dropDownSchedule-{{ @index }}">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        {{/each}}
+
+                    </ul>
+                </div>
+                <!-- / Tab Today Content-->
+
+                <!-- Tab Tomorrow Content-->
+                <div class="tab-pane fade" id="tomorrow" role="tabpanel" aria-labelledby="tomorrow-tab">
+                    <ul class="list-group list-group-flush">
+
+                        {{#each schedule.tomorrow}}
+                            <li class="list-group-item">
+                                <p class="fw-bolder mb-2 text-white">{{ title }}</p>
+                                <span class="small d-flex align-items-center"><i class="ri-time-line me-2"></i> {{ time }} <i class="ri-map-pin-line ms-6 me-2"></i> {{ location }}</span>
+                            </li>
+                        {{/each}}
+
+                    </ul>
+                </div>
+                <!-- / Tab Tomorro Content-->
+
+            </div>
+            <!-- / Tab Content-->
+
+        </div>
+    </div>
+{{/if}}

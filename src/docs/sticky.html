@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Sticky</h3>
+                    <p>Plugin homepage: <a href="https://rgalus.github.io/sticky-js/">https://rgalus.github.io/sticky-js/</a></p>
+
+                    <p>Sticky-js is a library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.</p>
+
+                    <section class="my-5 d-none d-lg-block" data-sticky-container>
+    
+                        <div class="row g-5">
+                            
+                            <!-- Images Section-->
+                            <div class="col-12">
+                                {{> gallery/images-stacked }}
+                            </div>
+                            <!-- Images Section-->
+                        </div>
+                    </section>                    
+
+                    <h4>Basic setup</h4>
+                    <p>Add the CSS class "sticky" to the element you want to make sticky. Then add "data-sticky-container" to parent of sticky elem.</p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <section class="my-5" data-sticky-container>
+                            <div class="sticky">
+                                HERE GOES STICKY CONTENT
+                            </div>
+                        </section>         
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/sticky</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

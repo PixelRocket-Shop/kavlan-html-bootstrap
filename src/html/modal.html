@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs page="Modal"}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Modal</h2>
+            <p class=" mb-4">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for
+                lightboxes, user notifications, or completely custom content.</p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+
+                    <!-- Example-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="card-title">Default example</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Launch demo modal
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /Example-->
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Swiper</h3>
+                    <p>Plugin homepage: <a href="https://swiperjs.com/https://swiperjs.com/">https://swiperjs.com/https://swiperjs.com/</a></p>
+                    <p>Swiper.js is a modern mobile touch slider, with a vast amount of different display options.</p>
+                    <div class="my-5">
+                        {{#if (config category-one) }}
+                            {{> 
+                                swiper/swiper-product-carousel-one 
+                                entries=category-one.entries
+                            }}
+                        {{/if}}  
+                    </div>                  
+
+                    <h4>Basic setup</h4>
+                    <p>Add the HTML elements that swiper requires. You can find those in the example below, or a better option is to grab the HTML code from the swiper.js demo page: <a href="https://swiperjs.com/demos">https://swiperjs.com/demos</a></p>
+                    <p>You then initialise the Swiper by passing in valid JSON into "data-options" through the "swiper-container" element. Be sure to use single quotes, not double quotes. You can also initialise the slider by writing custom JS - please refer to the swiper documentation for examples of this method. </p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <div class="swiper-container overflow-visible"
+                        data-swiper
+                        data-options='{
+                          "spaceBetween": 15,
+                          "cssMode": true,
+                          "navigation": {
+                            "nextEl": ".swiper-next",
+                            "prevEl": ".swiper-prev"
+                          },
+                          "scrollbar": {
+                              "el": ".swiper-scrollbar",
+                              "hide": false,
+                              "draggable": true
+                          },   
+                          "breakpoints": {
+                            "300": {
+                              "slidesPerView": 2
+                            },
+                            "700": {
+                              "slidesPerView": 3
+                            },       
+                            "999": {
+                              "slidesPerView": 4
+                            },
+                            "1300": {
+                              "slidesPerView": 5
+                            }
+                          }
+                        }'>
+                        <div class="swiper-wrapper mb-5">
+                          <div class="swiper-slide">
+                            HERE GOES CONTENT FOR EACH SWIPER SLIDE
+                          </div>
+                        </div>
+                      
+                      
+                        <!-- Add Scrollbar -->
+                        <div class="swiper-scrollbar mb-n4"></div>
+                      
+                              <!-- Add Arrows -->
+                              <div class="swiper-prev shadow-lg top-50  start-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 start-0 mt-n8 ms-n4 d-flex justify-content-center align-items-center opacity-50-hover"><i class="ri-arrow-left-s-line ri-lg"></i></div>
+                              <div class="swiper-next shadow-lg top-50 end-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 end-0 mt-n8 me-n4 d-flex justify-content-center align-items-center opacity-50-hover"><i class="ri-arrow-right-s-line ri-lg"></i></div>
+                      
+                      
+                      </div>         
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/swiper</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

@@ -1,0 +1,26 @@
+/* faded button */
+@each $color,
+$value in $theme-colors {
+    .btn-#{$color}-faded {
+        @include btn-variant-faded(rgba($value, $btn-faded-bg-opacity), $value);
+    }
+}
+
+.btn-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+}
+
+.btn-hover-dark {
+    transition: background ease-in-out .2s;
+
+    &:hover {
+        background: rgba(0,0,0,0.3);
+    }
+}

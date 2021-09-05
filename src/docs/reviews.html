@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Reviews</h3>
+                    <p>Custom components to display company and product reviews.</p>
+                    <h4>Company Reviews</h4>
+                    <p>Partial location: <code class="language-markup">src/partials/reviews/reviews-company.html</code></p> 
+                    <!-- Reviews-->
+                    <section class="my-10">
+                        <h2 class="fs-3 fw-bold mb-3 text-center mb-5">Customer Reviews</h2>
+                        {{> reviews/reviews-company }}
+                    </section>
+                    <!-- /Reviews-->            
+        
+                    <h4>Customer Reviews</h4>
+                    <p>Partial location: <code class="language-markup">src/partials/reviews/reviews-customers-one.html</code></p>
+                    <!-- Product Reviews-->
+                        <section class="py-10">    
+                            {{> reviews/reviews-customers-one }}
+                        </section>
+                    <!-- / Product Reviews-->
+                    <script type="text/plain" class="language-markup">
+                   
+                    </script>                    
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

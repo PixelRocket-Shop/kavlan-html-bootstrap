@@ -1,0 +1,78 @@
+{{#if (config projects)}}
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Projects</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownProjects" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownProjects">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table m-0 table-striped">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th class="text-end">Team</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each projects.entries }}
+                    <tr>
+                        <td class="text-white">{{ project }}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <span class="dot dot-xs bg-{{ status-class}} me-2"></span> {{ status }}
+                            </div>
+                        </td>
+                        <td>{{ date }}</td>
+                        <td>
+                            <div class="avatar-group">
+                                {{#each team}}
+                                <picture class="avatar-group-img" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ name }}">
+                                    <img class="f-w-10 rounded-circle" src="{{ img }}"
+                                      alt="{{ config.defaultImgAlt }}">
+                                </picture>
+                                {{/each}}
+                            </div>
+                        </td>
+                        <td class="text-end">
+                            <div class="dropdown">
+                                <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                                    id="dropDownProj-{{ @index }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-2-line"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown" aria-labelledby="dropDownProj-{{ @index }}">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>    
+        <nav>
+            <ul class="pagination justify-content-end mt-3 mb-0">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+    </div>
+</div>
+{{/if}}

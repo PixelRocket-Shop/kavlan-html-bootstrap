@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar }}
+        <!-- / Navb-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Sizing</h3>
+                    <p>We have extended the default Bootstrap utilities for sizing to give you greater control over elements that require either a fixed width or height (or both).</p>
+
+                    <h4>Fixed width & height options</h4>
+                    <p>You can assign a fixed width to an element by using <code class="language-markup">f-w-${value}</code>. Replace "${value}" with a value listed below, eg "f-w-32"</p>
+                    <p>The same applies for fixed height, but use class "f-h-32".</p>
+                    <div class="d-flex flex-wrap my-5">
+                        <div class="f-w-32 f-h-32 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-32 f-h-32</div>
+                        <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-40 f-h-40</div>
+                        <div class="f-w-60 f-h-60 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-60 f-h-60</div>
+                    </div>
+                    <h4>Fixed width/height chart</h4>
+                    <table class="table table-striped">
+                        <tr><td>f-w-1 / f-h-1 </td> <td>.25rem</td></tr>
+                        <tr><td>f-w-2 / f-h-2 </td> <td>.5rem</td></tr>
+                        <tr><td>f-w-3 / f-h-3 </td> <td>.75rem</td></tr>
+                        <tr><td>f-w-4 / f-h-4 </td> <td>1rem</td></tr>
+                        <tr><td>f-w-5 / f-h-5 </td> <td>1.25rem</td></tr>
+                        <tr><td>f-w-6 / f-h-6 </td> <td>1.5rem</td></tr>
+                        <tr><td>f-w-7 / f-h-7 </td> <td>1.75rem</td></tr>
+                        <tr><td>f-w-8 / f-h-8 </td> <td>2rem</td></tr>
+                        <tr><td>f-w-9 / f-h-9 </td> <td>2.25rem</td></tr>
+                        <tr><td>f-w-10 / f-h-10 </td> <td>2.5rem</td></tr>
+                        <tr><td>f-w-12 / f-h-12 </td> <td>3rem</td></tr>
+                        <tr><td>f-w-14 / f-h-14 </td> <td>3.5rem</td></tr>
+                        <tr><td>f-w-16 / f-h-16 </td> <td>4rem</td></tr>
+                        <tr><td>f-w-20 / f-h-20 </td> <td>5rem</td></tr>
+                        <tr><td>f-w-24 / f-h-24 </td> <td>6rem</td></tr>
+                        <tr><td>f-w-28 / f-h-28 </td> <td>7rem</td></tr>
+                        <tr><td>f-w-30 / f-h-30 </td> <td>7.25rem</td></tr>
+                        <tr><td>f-w-32 / f-h-32 </td> <td>8rem</td></tr>
+                        <tr><td>f-w-36 / f-h-36 </td> <td>9rem</td></tr>
+                        <tr><td>f-w-40 / f-h-40 </td> <td>10rem</td></tr>
+                        <tr><td>f-w-44 / f-h-44 </td> <td>11rem</td></tr>
+                        <tr><td>f-w-48 / f-h-48 </td> <td>12rem</td></tr>
+                        <tr><td>f-w-52 / f-h-52 </td> <td>15rem</td></tr>
+                        <tr><td>f-w-56 / f-h-56 </td> <td>18rem</td></tr>
+                        <tr><td>f-w-60 / f-h-60 </td> <td>21rem</td></tr>
+                        <tr><td>f-w-64 / f-h-64 </td> <td>24rem</td></tr>
+                        <tr><td>f-w-68 / f-h-68 </td> <td>27rem</td></tr>
+                        <tr><td>f-w-72 / f-h-72 </td> <td>30rem</td></tr>
+                        <tr><td>f-w-76 / f-h-76 </td> <td>33rem</td></tr>
+                        <tr><td>f-w-80 / f-h-80 </td> <td>36rem</td></tr>
+                        <tr><td>f-w-84 / f-h-84 </td> <td>40rem</td></tr>
+                        <tr><td>f-w-88 / f-h-88 </td> <td>44rem</td></tr>
+                        <tr><td>f-w-92 / f-h-92 </td> <td>50rem</td></tr>
+                        <tr><td>f-w-96 / f-h-96 </td> <td>56rem</td></tr>
+                        <tr><td>f-w-100 / f-h-100</td> <td>60rem</td></tr>
+                        </table>
+                    <script type="text/plain" class="language-markup">
+                        <div class="d-flex flex-wrap my-5">
+
+                            <div class="f-w-32 f-h-32 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-32 f-h-32</div>
+
+                            <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-40 f-h-40</div>
+
+                            <div class="f-w-60 f-h-60 me-5 mb-5 fw-bolder bg-primary text-white d-flex justify-content-center align-items-center">f-w-60 f-h-60</div>
+
+                        </div>                   
+                    </script>                    
+                </div>
+            </div>
+        </section>
+        <!-- / section>
+        <!-- Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

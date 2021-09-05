@@ -1,0 +1,48 @@
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Sales by region</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="chart chart-lg">
+            <canvas id="chartSalesRegion"></canvas>
+        </div>
+
+        <div class="row g-1 mt-4">
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$103,456</p>
+                <div class="d-flex align-items-center">
+                    <span class="dot dot-xs bg-warning d-block me-2"></span>
+                    <span class="small text-muted">USA</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$123,325</p>
+                <div class="d-flex align-items-center">
+                    <span class="dot dot-xs bg-success d-block me-2"></span>
+                    <span class="small text-muted">Europe</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$148,899</p>
+                <div class="d-flex align-items-center">
+                    <span class="dot dot-xs bg-info d-block me-2"></span>
+                    <span class="small text-muted">Asia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

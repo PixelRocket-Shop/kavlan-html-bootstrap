@@ -1,0 +1,59 @@
+.avatar {
+    position: relative;
+    img {
+        border-radius: 100%;
+        width: 6rem;
+    }
+}
+
+.avatar-sm {
+    img {
+        width: 3rem;
+    }
+}
+
+.avatar-xs {
+    img {
+        width: 2.25rem;
+    }
+}
+
+.avatar-profile {
+    border-radius: 100%;
+    display: block;
+    border: 2px solid $primary;
+}
+
+.avatar-profile-img {
+    border: 3px solid $gray-700;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-dot {
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+    border: 4px solid $gray-700;
+    z-index: 3;
+}
+
+.avatar-dot.dot-sm {
+    border-width: 2px;
+    right: 1%;
+}
+
+
+.avatar-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.avatar-group-img {
+    margin-left: -.9rem;
+
+    img {
+        border: 3px solid $gray-800;
+    }
+}

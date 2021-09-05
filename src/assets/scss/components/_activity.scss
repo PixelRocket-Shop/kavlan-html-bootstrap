@@ -1,0 +1,20 @@
+.list-group-activity {
+    position: relative;
+    border: 0;
+
+    &:before {
+    border-left: 1px solid $border-color;
+    content: "";
+    height: 100%;
+    left: 1.15rem;
+    position: absolute;
+    top: 1.25rem;
+    bottom: 0;
+    }
+
+    &:last-child {
+        &:before {
+            display: none;
+        }
+    }
+}

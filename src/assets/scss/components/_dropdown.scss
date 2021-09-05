@@ -1,0 +1,37 @@
+.dropdown-menu {
+    box-shadow: $box-shadow-lg;
+
+    li {
+        margin-bottom: $dropdown-divider-margin-y;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.dropdown-toggle-icon {
+    text-decoration: none;
+
+    &:after {
+        display: none !important;
+    }
+}
+
+.dropdown-divider {
+    opacity: 1;
+    margin: 1rem -#{$dropdown-padding-x};
+}
+
+.dropdown-header {
+    border-bottom: 1px solid $border-color;
+    margin: 0 -#{$dropdown-padding-x};
+}
+
+.dropdown-lg {
+    min-width: 17rem;
+}
+
+.dropdown > .btn.dropdown-toggle-icon {
+    color: $text-muted;
+}

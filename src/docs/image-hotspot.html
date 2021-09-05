@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Image hotspots</h3>
+                    <p>The image hotspot functionality is a custom plugin developed by Pixel Rocket. It uses Tippy.js to display the pop up element. Please read more about Tippy.js here: <a href="https://atomiks.github.io/tippyjs/">https://atomiks.github.io/tippyjs/</a></p>
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <div class="w-100 f-h-72 bg-img-cover bg-pos-center-center hotspot-container" style="background-image: url(https://images.unsplash.com/photo-1522205787843-417a637f4c30?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&h=700&q=80);">
+                            <div class="hotspot" data-options='{
+                                "placement": {
+                                    "left": "35%",
+                                    "bottom": "30%"
+                                },
+                                "alwaysVisible": true,
+                                "alwaysAnimate": true,
+                                "contentTarget": "#hotspot-one",
+                                "trigger": "mouseenter"
+                            }'>
+                            </div>
+                            <div class="hotspot" data-options='{
+                                "placement": {
+                                    "left": "23%",
+                                    "top": "55%"
+                                },
+                                "alwaysVisible": true,
+                                "alwaysAnimate": true,
+                                "contentTarget": "#hotspot-one"
+                            }'>
+                            </div>
+                            <div class="hotspot" data-options='{
+                                "placement": {
+                                    "left": "23%",
+                                    "bottom": "15%"
+                                },
+                                "alwaysVisible": true,
+                                "alwaysAnimate": true,
+                                "content": "This is an example of basic text only as content"
+                            }'>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Hotspot HTML Content -->
+                    <div id="hotspot-one" class="d-none">
+                        <div class="m-n2 overflow-hidden">
+                            <div class="mb-1 bg-light d-flex justify-content-center">
+                                <div class="f-w-48 p-3">
+                                    <img class="img-fluid" src="{{webRoot}}/assets/images/products/premium/product-1.jpg" alt="{{config.defaultImgAlt}}">
+                                </div>
+                            </div>
+                            <div class="px-4 py-4 text-center">
+                                <div class="d-flex justify-content-center align-items-center mx-auto mb-1">
+                                    {{> reviews/review-stars-small width="80%" }} <span class="small fw-bolder ms-2 text-muted"> 4.4 (1289)</span>
+                                </div>
+                                <p class="mb-0 mx-4">Pusher Outdoor Jeans Black Women</p>
+                                <p class="lead lh-1 m-0 fw-bolder mt-2 mb-3">$199.87</p>
+                                <a href="{{webRoot}}/shop-product.html" class="fw-bolder text-link-border pb-1 fs-6">Full details <i class="ri-arrow-right-line align-bottom"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Basic setup</h4>
+                    <p>Create an element with the CSS class "hotspot-container". This is the parent elements. Inside this parent, create as many hotspots by using the CSS class "hotspot". This is the actual hotspot. Then pass in your configuration options to the hotspot via the "data-options" attribute. </p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <div class="w-100 f-h-72 bg-img-cover bg-pos-center-center hotspot-container" style="background-image: url(https://images.unsplash.com/photo-1522205787843-417a637f4c30?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&h=700&q=80);">
+                                <div class="hotspot" data-options='{
+                                    "placement": {
+                                        "left": "35%",
+                                        "bottom": "30%"
+                                    },
+                                    "alwaysVisible": true,
+                                    "alwaysAnimate": true,
+                                    "contentTarget": "#hotspot-one",
+                                    "trigger": "mouseenter"
+                                }'>
+                                </div>
+                                <div class="hotspot" data-options='{
+                                    "placement": {
+                                        "left": "23%",
+                                        "top": "55%"
+                                    },
+                                    "alwaysVisible": true,
+                                    "alwaysAnimate": true,
+                                    "contentTarget": "#hotspot-one"
+                                }'>
+                                </div>
+                                <div class="hotspot" data-options='{
+                                    "placement": {
+                                        "left": "23%",
+                                        "bottom": "15%"
+                                    },
+                                    "alwaysVisible": true,
+                                    "alwaysAnimate": true,
+                                    "content": "This is an example of basic text only as content"
+                                }'>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Example Hotspot HTML Content -->
+                        <div id="hotspot-one" class="d-none">
+                            <div class="m-n2 overflow-hidden">
+                                <div class="mb-1 bg-light d-flex justify-content-center">
+                                    <div class="f-w-48 p-3">
+                                        <img class="img-fluid" src="{{webRoot}}/assets/images/products/premium/product-1.jpg" alt="{{config.defaultImgAlt}}">
+                                    </div>
+                                </div>
+                                <div class="px-4 py-4 text-center">
+                                    <div class="d-flex justify-content-center align-items-center mx-auto mb-1">
+                                        {{> reviews/review-stars-small width="80%" }} <span class="small fw-bolder ms-2 text-muted"> 4.4 (1289)</span>
+                                    </div>
+                                    <p class="mb-0 mx-4">Pusher Outdoor Jeans Black Women</p>
+                                    <p class="lead lh-1 m-0 fw-bolder mt-2 mb-3">$199.87</p>
+                                    <a href="{{webRoot}}/shop-product.html" class="fw-bolder text-link-border pb-1 fs-6">Full details <i class="ri-arrow-right-line align-bottom"></i></a>
+                                </div>
+                            </div>
+                        </div>        
+                    </script>             
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

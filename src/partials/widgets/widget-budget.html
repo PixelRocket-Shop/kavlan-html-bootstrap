@@ -1,0 +1,80 @@
+{{#if (config budget) }}
+<div class="card h-100">
+    <div class="card-header justify-content-between align-items-center d-flex border-0 pb-0">
+        <h6 class="card-title">Budget summary</h6>
+
+        <!-- Nav Pills-->
+        <ul class="nav nav-pills justify-content-end m-0" id="budgetTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="current-tab" data-bs-toggle="tab" data-bs-target="#current" type="button" role="tab" aria-controls="current" aria-selected="true">2021</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="previous-tab" data-bs-toggle="tab" data-bs-target="#previous" type="button" role="tab" aria-controls="previous" aria-selected="false">2020</button>
+            </li>
+          </ul>
+          <!-- / Nav Pills-->
+
+    </div>
+    <div class="card-body">
+
+          <!-- Tab Content-->
+          <div class="tab-content" id="budgetTabContent">
+
+            <!-- Tab current Content-->
+            <div class="tab-pane fade show active" id="current" role="tabpanel" aria-labelledby="current-tab">
+                <ul class="list-group list-group-flush">
+
+                    {{# each budget.current }}
+                    <li class="list-group-item py-3">
+                        <div class="row gx-5 d-flex align-items-center">
+                            <div class="col-6 text-white d-flex align-items-center">
+                                <span class="dot dot-xs bg-{{ css-class }} me-2"></span> {{ title }}
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="d-flex justify-content-end flex-grow-1 flex-column">
+                                    <div class="d-flex justify-content-end small text-white mb-1">{{ value }}%</div>
+                                    <div class="progress d-flex flex-grow-1 f-h-1">
+                                        <div class="progress-bar bg-{{ css-class }}" style="width: {{ value}}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="{{ value}}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+
+                </ul>
+            </div>
+            <!-- / Tab current Content-->
+
+            <!-- Tab previous Content-->
+            <div class="tab-pane fade" id="previous" role="tabpanel" aria-labelledby="previous-tab">
+                <ul class="list-group list-group-flush">
+
+                    {{# each budget.previous }}
+                    <li class="list-group-item py-3">
+                        <div class="row gx-5 d-flex align-items-center">
+                            <div class="col-6 text-white d-flex align-items-center">
+                                <span class="f-w-2 f-h-2 d-block rounded-circle bg-{{ css-class }} me-2"></span> {{ title }}
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="d-flex justify-content-end flex-grow-1 flex-column">
+                                    <div class="d-flex justify-content-end small text-white mb-1">{{ value }}%</div>
+                                    <div class="progress d-flex flex-grow-1 f-h-1">
+                                        <div class="progress-bar bg-{{ css-class }}" style="width: {{ value }}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="{{ value}}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+
+                </ul>
+            </div>
+            <!-- / Tab Tomorro Content-->
+
+          </div>
+          <!-- / Tab Content-->
+
+    </div>
+</div>
+{{/if}}

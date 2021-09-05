@@ -1,0 +1,4 @@
+.goal .form-check-input:checked+.form-check-label {
+    text-decoration: line-through;
+    opacity: .25;
+}

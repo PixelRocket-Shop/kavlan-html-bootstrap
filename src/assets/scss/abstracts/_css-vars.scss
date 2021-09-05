@@ -1,0 +1,49 @@
+:root {
+    /* Bootstrap vars */
+    --bs-font-sans-serif: 'Overpass', sans-serif;
+    --bs-spacer: #{$spacer};
+    --bs-gutter-width: #{$grid-gutter-width};
+
+    /* Theme vars */
+    --theme-font-headings: 'Overpass', sans-serif;
+    --theme-sidebar-width: 250px;
+    --theme-sidebar-closed-width: 60px;
+    --theme-sidebar-transition: all ease-in .1s;
+    --theme-sidebar-padding-x: 1.5rem;
+    --theme-sidebar-padding-y: 1.5rem;
+    --theme-navbar-height: 66px;
+    --theme-page-content-padding-x: 1.5rem;
+    --theme-bg-dark-opacity: rgba(0,0,0,.1);
+
+    /* Icon font family */
+    --theme-font-icon: 'remixicon';
+    --theme-font-icon-style: 'normal';
+
+    /* Custom checkbox styles */
+    --theme-form-checkbox-before-size: 20px;
+    --theme-form-checkbox-bg-before-size: 28px;
+    --theme-form-checkbox-after-width: 6px;
+    --theme-form-checkbox-after-height: 12px;
+    --theme-form-checkbox-border-radius: 2px;
+    --theme-form-checkbox-after-position-left: 7px;
+    --theme-form-checkbox-after-position-top: 4px;
+    --theme-form-checkbox-bg-after-position-left: 11px;
+    --theme-form-checkbox-bg-after-position-top: 7px;
+    --theme-form-checkbox-after-border-width: 2px;
+    --theme-form-checkbox-active-color: #{$dark};
+    --theme-form-radio-button-after-size: 10px;
+    --theme-form-radio-button-after-position-left: 5px;
+    --theme-form-radio-button-after-position-top: 6px;
+    
+    --theme-form-radio-button-border-radius: 100%;
+
+    /* theme breakpoints using Bootstrap sass map */
+    @each $breakpoint, $value in $grid-breakpoints {
+        --theme-breakpoint-#{$breakpoint}: #{$value};
+    }
+
+    /* theme max widths using sass map */
+    @each $breakpoint, $value in $container-max-widths {
+        --theme-maxwidth-breakpoint-#{$breakpoint}: #{$value};
+    }
+}

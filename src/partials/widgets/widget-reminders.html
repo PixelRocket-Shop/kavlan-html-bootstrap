@@ -1,0 +1,40 @@
+{{#if (config reminders)}}
+<div class="card h-100">
+    <div class="card-header justify-content-between align-items-center d-flex border-0 pb-0">
+        <h6 class="card-title m-0">Reminders</h6>
+    </div>
+    <div class="card-body">
+
+        <ul class="list-group list-group-flush">
+
+            {{#each reminders.entries}}
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+
+                <div class="d-flex align-items-start">
+                    <button class="btn btn-icon bg-{{ css-class }}-faded text-{{ css-class }} me-3">
+                        <i class="{{ icon }}"></i>
+                    </button>
+                    <div>
+                        <p class="fw-bolder mb-2 text-white">{{ title }}</p>
+                        <span class="small d-flex align-items-center"><i class="ri-calendar-line me-2"></i> {{ date }}</span>
+                    </div>
+                </div>
+
+                <div class="dropdown ms-5">
+                    <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                        id="dropDownReminder-{{ @index }}" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-2-line"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown dropdown-menu-end" aria-labelledby="dropDownReminder-{{ @index }}">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </li>
+            {{/each}}
+
+        </ul>
+    </div>
+</div>
+{{/if}}

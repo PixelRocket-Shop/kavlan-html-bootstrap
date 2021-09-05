@@ -1,0 +1,10 @@
+.footer {
+    margin-top: auto;
+    border-top: 1px solid $border-color;
+    margin-left: calc(-1 * (var(--bs-gutter-width) * 2));
+    margin-right: calc(-1 * (var(--bs-gutter-width) * 2));
+    display: flex;
+    padding: 1.25rem calc(var(--bs-gutter-width) * 2);
+    justify-content: space-between;
+    align-items: center;
+}

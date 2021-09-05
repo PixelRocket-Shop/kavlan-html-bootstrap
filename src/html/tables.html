@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+  <!-- Navbar-->
+  {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+  <!-- / Navbar-->
+
+  <!-- Page Content -->
+  <main id="main">
+
+    <!-- Content-->
+    <section class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      {{> content/breadcrumbs page="Tables"}}
+      <!-- / Breadcrumbs-->
+
+      <!-- Page Title-->
+      <h2 class="fs-4 mb-2">Tables</h2>
+      <p class=" mb-4">Examples for opt-in styling of tables.</p>
+      <!-- / Page Title-->
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+
+          <!-- Example-->
+          <div class="card mb-4">
+            <div class="card-header">
+              <h6 class="card-title">Default example</h6>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- /Example-->
+
+        </div>
+
+        <div class="col-12 col-md-6">
+
+          <!--  Example-->
+          <div class="card mb-4">
+            <div class="card-header">
+              <h6 class="card-title">Striped row</h6>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- / Example-->
+
+
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+      {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+      <!-- / Footer-->
+
+    </section>
+    <!-- / Content-->
+
+  </main>
+  <!-- /Page Content -->
+
+  <!-- Page Aside-->
+  {{> aside/aside }}
+  <!-- / Page Aside-->
+
+  <!-- Theme JS -->
+  {{> footer/scripts }}
+
+</body>
+
+</html>

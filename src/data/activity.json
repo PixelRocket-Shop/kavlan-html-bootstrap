@@ -1,0 +1,27 @@
+{
+   "entries": [{
+      "img": "{{webRoot}}/assets/images/profile-small-7.jpeg",
+      "name": "John Doe",
+      "activity": "Submitted quarterly marketing report for review.",
+      "time" : "5m ago"
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+      "name": "Sally Field",
+      "activity": "Marked project status as completed.",
+      "time" : "1h ago"
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-3.jpeg",
+      "name": "Mark Robinson",
+      "activity": "Created new sales report export.",
+      "time" : "2h ago"
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-4.jpeg",
+      "name": "Jeffrey Way",
+      "activity": "Set user status as 'offline'",
+      "time" : "6h ago"
+   }
+]
+}

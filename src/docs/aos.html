@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>AOS (Animate On Scroll)</h3>
+                    <p>Plugin homepage: <a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a></p>
+                    <p>Javascript plugin that fades in elements on the page as the user scrolls them into view. Examples:</p>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-in">Fade in</div>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-left">Fade left</div>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-right">Fade right</div>
+                    <p>Keep scrolling down to see reveal on scroll...</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <p>|</p>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-in">Fade in</div>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-left">Fade left</div>
+                    <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-right">Fade right</div>                    
+                    <h4>Basic setup</h4>
+                    <p>Add "data-aos" to the element you want to animate and then the type of animation. Please refer to plugin homepage for full list of available animations and also further configuration options.</p>
+                    <script type="text/plain" class="language-markup markup-block">
+                        <div class="bg-primary f-h-32 text-white d-flex justify-content-center align-items-center mb-3" data-aos="fade-in">Fade in</div>          
+                    </script>
+                    <h4>Template integration</h4>
+                    <p>You can find our JS setup here: <code class="language-markup">src/assets/js/components/aos</code></p>
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

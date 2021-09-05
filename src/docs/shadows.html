@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Shadows</h3>
+                    <p>Generate different coloured shadows. All Bootstrap theme colours available.</p>
+                    <div class="d-flex flex-wrap my-5">
+                        <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-primary shadow-primary text-white d-flex justify-content-center align-items-center">Primary Shadow</div>
+                        <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-danger shadow-danger text-white d-flex justify-content-center align-items-center">Danger Shadow</div>
+                        <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-info shadow-info text-white d-flex justify-content-center align-items-center">Info Shadow</div>
+                        <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-success shadow-success text-white d-flex justify-content-center align-items-center">Success Shadow</div>
+                    </div>
+                    <script type="text/plain" class="language-markup"> 
+                        <div class="d-flex flex-wrap">
+
+                            <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-primary shadow-primary text-white d-flex justify-content-center align-items-center">Primary Shadow</div>
+
+                            <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-danger shadow-danger text-white d-flex justify-content-center align-items-center">Danger Shadow</div>
+
+                            <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-info shadow-info text-white d-flex justify-content-center align-items-center">Info Shadow</div>
+
+                            <div class="f-w-40 f-h-40 me-5 mb-5 fw-bolder bg-success shadow-success text-white d-flex justify-content-center align-items-center">Success Shadow</div>
+
+                        </div>                                        
+                    </script>                    
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

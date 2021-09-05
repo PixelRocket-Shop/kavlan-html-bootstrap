@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Bootstrap components</h3>
+                    <p>All of the default Bootstrap components are available in our template. Instead of repeating the help documentation that Bootstrap already have, please read through their component section for a full overview of what components are available and how to implement them: <a href="https://getbootstrap.com/docs/5.0/components/accordion/">https://getbootstrap.com/docs/5.0/components/accordion/</a></p> 
+                    <p>The components section of our helpdocs will focus on the custom components our template offers.</p>                  
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>

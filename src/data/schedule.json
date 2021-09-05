@@ -1,0 +1,44 @@
+{
+   "today": [{
+         "title": "Sales meeting",
+         "time": "09:35",
+         "location": "Meeting room 32B"
+      },
+      {
+         "title": "Interview with Patrick Nelson",
+         "time": "11:45",
+         "location": "Main conference hall"
+      },
+      {
+         "title": "Weekly API call",
+         "time": "14:00",
+         "location": "Online"
+      },
+      {
+         "title": "Design review",
+         "time": "16:35",
+         "location": "Meeting room 12A"
+      }
+   ],
+   "tomorrow": [{
+         "title": "New product marketing meeting",
+         "time": "11:00",
+         "location": "Central London, SW19 7TH"
+      },
+      {
+         "title": "Design review",
+         "time": "13:45",
+         "location": "Meeting room 14B"
+      },
+      {
+         "title": "Daily SCRUM meeting",
+         "time": "15:00",
+         "location": "Online"
+      },
+      {
+         "title": "Sales meeting",
+         "time": "16:35",
+         "location": "Meeting room 12A"
+      }
+   ]
+}

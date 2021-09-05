@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head -->
+    {{> docs/docs-head }}
+
+    <body class="{{ config.classes.body }}">
+
+        <!-- Navbar -->
+        {{> docs/docs-navbar }}
+        <!-- / Navbar-->
+
+        <!-- Main Section-->
+        <section class="container mt-5">
+            <div class="row g-4 h-100">
+                <div class="col-12 col-lg-3 d-flex">
+                    {{> docs/docs-aside }}
+                </div>
+                <div class="col-12 col-lg-9">
+                    <h3>Requirements</h3>
+                    <p>If you do not intend to work with the template source code (and that means you will not be compiling it or running the Webpack dev server), you do not need to install anything. You can simply navigate to the <code class="language-markup">dist</code> folder and start editing the files.</p> 
+                    <div class="alert alert-danger-faded">Be warned: if you edit the files inside the dist folder and then decide to recompile the template using Webpack, you will lose any changes made to files inside the dist folder. This is because when Webpack compiles the template, it places all files inside the dist folder, thereby overwriting the current files.</div> 
+                    <h4>Node</h4>
+                    <p>Most, if not all developers will be editing the source code and will also be running Webpack to compile the template. If that's the case, then ensure that you have Node.js installed. You can download it from here: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p> 
+                    <p>That's it. That's all you need to have pre-installed. You can now open the main template folder with your command line!</p>      
+                </div>
+            </div>
+        </section>
+        <!-- / Main Section-->
+
+        <!-- Footer -->
+        {{> docs/docs-footer }}
+
+      <!-- Modal Imports-->
+    {{> modals/modals}}
+
+    <!-- Offcanvas Imports-->
+    {{> offcanvas/offcanvas }}          
+
+        <!-- Theme JS -->
+        {{> docs/docs-scripts }}
+
+    </body>
+
+</html>
