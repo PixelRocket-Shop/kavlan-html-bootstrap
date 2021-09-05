@@ -1,11 +1,11 @@
 # Kavlan - Bootstrap 5 HTML Responsive Admin Template
 
 ## Overview
-Kavlan is the perfect template to make your administration system a breeze to navigate and maintain. Clean, responsive, and easy-to-use, Kavlan delivers a user experience that will help you create a successful interface. And above all, it's free!
+Kavlan is the perfect dark admin panel template to make your administration system a breeze to navigate and maintain. Clean, responsive, and easy-to-use, Kavlan delivers a user experience that will help you create a successful interface. And above all, it's free!
 
-<strong><a href="https://Kavlan-html-bootstrap.vercel.app/">View Demo</a> | <a href="https://github.com/PixelRocket-Shop/Kavlan-html-bootstrap/archive/main.zip">Download ZIP</a></strong>
+<strong><a href="https://kavlan-html-bootstrap.vercel.app/">View Demo</a> | <a href="https://github.com/PixelRocket-Shop/kavlan-html-bootstrap/archive/main.zip">Download ZIP</a></strong>
 
-![Bootstrap 5 Responsive HTML Fashion Store Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/Kavlan-html/homepage.png "Kavlan | Responsive Bootstrap 5 Ecommerce Template")
+![Bootstrap 5 Responsive HTML Admin Panel](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/kavlan-html/homepage-medium.jpg "Kavlan | Responsive Bootstrap 5 Admin Panel Template")
 
 ## Table of contents
 
@@ -31,7 +31,7 @@ Most developers will be editing the source code and will also be running Webpack
 
 
 ## Quick Start
-- [Download the latest release](https://github.com/PixelRocket-Shop/Kavlan-html-bootstrap/archive/main.zip) OR clone the repo: `git clone https://github.com/PixelRocket-Shop/Kavlan-html-bootstrap.git`
+- [Download the latest release](https://github.com/PixelRocket-Shop/kavlan-html-bootstrap/archive/main.zip) OR clone the repo: `git clone https://github.com/PixelRocket-Shop/kavlan-html-bootstrap.git`
 - Install Node.js if you don't already have it on your system.
 - Open the project root in your command line.
 - run `npm install` in your command line.
@@ -53,7 +53,7 @@ To keep code repetition to a minimum, we've used Handlebars.js as the templating
 
 
 ## Demo Link
-[Demo URL](https://Kavlan-html-bootstrap.vercel.app/)
+[Demo URL](https://kavlan-html-bootstrap.vercel.app/)
 
 **Please note that this is an HTML template only. It does not connect to a database, and will not automatically work in a content management system (Wordpress etc). You will need to incorporate our code into your application.**
 
